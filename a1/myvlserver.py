@@ -1,3 +1,4 @@
+from math import trunc
 from socket import *
 
 serverName = 'localhost' #ip address
@@ -10,14 +11,25 @@ serverSocket.bind(('', serverPort))
 
 serverSocket.listen(1)
 print("server is listening")
+
+
+
 while True:
-
+    #set up connection and print out the IP and port
     cnSocket, addr = serverSocket.accept()
-    sentence = cnSocket.recv(64).decode()
+    print(f'Connection established with {addr[0]} at port {addr[1]}')
 
+    #extract the length of the message
+    length = int(cnSocket.recv(64).decode())
+    number_of_transaction = trunc((length / 64) if (length % 64 == 0) else ((length/64) + 1))
+    print(f'Number of transaction: {number_of_transaction}')
 
-    capSentence = sentence.upper()
+    cnSocket.send(str(isinstance(length, int)).encode())
+    print(f"client specified length: {length}")
 
-    cnSocket.send(capSentence.encode())
+    for _ in range(number_of_transaction):
+        sentence = cnSocket.recv(64).decode()
+        capSentence = sentence.upper()
+        cnSocket.send(capSentence.encode())
 
     cnSocket.close()
