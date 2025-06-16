@@ -36,10 +36,10 @@ for i in range(len(message_list)):
         clientSocket.sendto(message_list[i].encode(),
                             (serverName, serverPort))
         modifiedMessage, serverAddress = clientSocket.recvfrom(64)
-        print(f'chunk# {i}, msg: {modifiedMessage.decode()}')
+        print(f'chunk# {i}, length: {len(modifiedMessage) if modifiedMessage is not None else 0}, msg: {modifiedMessage.decode()}')
     except socket.error as err:
-        print(f'Error at chunk# {i}:, msg: {str(err)}')
+        print(f'Error at chunk# {i}, msg: {str(err)}')
 
 # send complete signal
-#close the socket once everything is transformed
+# close the socket once everything is transformed
 clientSocket.close()
