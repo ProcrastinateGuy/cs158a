@@ -1,7 +1,7 @@
 <div>
     <h1>Assignment 1: </h1>
     <hr>
-    <h3>contact: <u>shih-ru,sheng@sjsu.edu</u></h3>
+    <h3>contact: <u>shih-ru.sheng@sjsu.edu</u></h3>
     <p>This assignment is about creating a simple client-server
     program, with variable length
     </p>
@@ -33,7 +33,7 @@
             C:\Python313\python.exe ".\cs158a\a1\myvlserver.py"<br>
             server is listening<br>
             Connection established with 127.0.0.1 at port 60299<br>
-            Number of transaction: 2<br>
+            Number of transactions: 2<br>
             client specified length: 99<br>
             client message actual length: 99<br>
         </blockquote>

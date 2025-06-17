@@ -22,7 +22,7 @@ while True:
     #extract the length of the message
     length = int(cnSocket.recv(64).decode())
     number_of_transaction = trunc((length / 64) if (length % 64 == 0) else ((length/64) + 1))
-    print(f'Number of transaction: {number_of_transaction}')
+    print(f'Number of transactions: {number_of_transaction}')
 
     cnSocket.send(str(isinstance(length, int)).encode())
     print(f"client specified length: {length}")
