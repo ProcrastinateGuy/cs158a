@@ -27,9 +27,13 @@ while True:
     cnSocket.send(str(isinstance(length, int)).encode())
     print(f"client specified length: {length}")
 
+    actual_length = 0
     for _ in range(number_of_transaction):
         sentence = cnSocket.recv(64).decode()
         capSentence = sentence.upper()
+        actual_length += len(sentence)
         cnSocket.send(capSentence.encode())
+
+    print(f'client message actual length: {actual_length}')
 
     cnSocket.close()

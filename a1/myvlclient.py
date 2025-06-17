@@ -22,8 +22,6 @@ except ValueError:
 message_list = \
     [message[i:i+chunk_length] for i in range(2, len(message), chunk_length)]
 
-#debug
-print(message_list)
 
 #send the length of message to server
 clientSocket.sendto(str(length_of_message).encode(),
