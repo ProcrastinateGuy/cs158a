@@ -22,7 +22,7 @@
     <h2>Usage</h2>
     <ol>
         <li>Start the myvlenserver.py</li>
-        <li>After seeing "server is listening", Start the myvlenclient.py</li>
+        <li>After seeing <code>"server is listening"</code>, Start the myvlenclient.py</li>
         <li>&starf;<b>You must start the server before starting the client</b>&starf;</li>
     </ol>
     <hr>
