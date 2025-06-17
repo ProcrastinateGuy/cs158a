@@ -19,6 +19,12 @@
         <li>The first 2 characters of a message is the length of the message</li>
         <li>All characters are between UTF8 U+0000 and U+007F.</li>
     </ul>
+    <h2>Usage</h2>
+    <ol>
+        <li>Start the myvlenserver.py</li>
+        <li>After seeing "server is listening", Start the myvlenclient.py</li>
+        <li>&starf;<b>You must start the server before starting the client</b>&starf;</li>
+    </ol>
     <hr>
     <div>
         <h2>Example Output</h2>
@@ -32,7 +38,7 @@
             client message actual length: 99<br>
         </blockquote>
         <br>
-        <h3>Server Side:</h3>
+        <h3>Client Side:</h3>
         <blockquote>
             C:\Python313\python.exe ".\cs158a\a1\myvlclient.py" <br>
             Input lowercase sentence:<br>99asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdaqweqweqweqweqweqweqweqweqweqweqweqw<br>
