@@ -28,8 +28,8 @@ def handle_client(client, addr):
 
     while True:
         message = client.recv(1024).decode()
-        print(f'{addr[1]}: {message}')
         if (not message) or message.lower() == 'exit': break
+        print(f'{addr[1]}: {message}')
         broadcast(client, f"{addr[1]}: {message}")
 
     # clean up when disconnected
