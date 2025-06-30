@@ -30,6 +30,10 @@ def main():
     try:
          while True:
              message = input()
+             #if the message exceeds the limit, send an error to the client
+             if (len(message) > 1024):
+                 print("message length should be less than 1024 characters")
+                 continue
              client.send(message.encode())
              print()
              if message.lower() == 'exit': break
