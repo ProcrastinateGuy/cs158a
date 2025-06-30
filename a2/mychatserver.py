@@ -34,7 +34,7 @@ def handle_client(client, addr):
 
     # clean up when disconnected
     remove_client(client)
-    print(f"client: {addr} is now closed")
+    #print(f"client: {addr} is now closed")
     client.close()
 
 
