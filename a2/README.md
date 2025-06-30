@@ -56,7 +56,6 @@
         cya 55743<br>
         exit<br>
         Disconnected from server<br>
-        Process finished with exit code 0<br>
     </pre>
     <h3>Client 2</h3>
     <pre style="font-size: 19px;"> 
@@ -74,6 +73,5 @@
         55745: cya 55743<br>
         exit<br>
         Disconnected from server<br>
-        Process finished with exit code 0<br>
     </pre>
 </div>
