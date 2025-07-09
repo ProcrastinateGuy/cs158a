@@ -30,7 +30,7 @@ class LeaderNode:
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_ready = Event()
-        self.log_file = open('a3/log.txt', 'a')
+        self.log_file = open('a3/log1.txt', 'a')
 
     def load_config(self, path):
         with open(path, 'r') as f:
