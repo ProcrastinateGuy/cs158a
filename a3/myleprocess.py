@@ -30,7 +30,7 @@ class LeaderNode:
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_ready = Event()
-        self.log_file = open('log.txt', 'a')
+        self.log_file = open('a3/log.txt', 'a')
 
     def load_config(self, path):
         with open(path, 'r') as f:
@@ -101,8 +101,8 @@ class LeaderNode:
         if msg.uuid == str(self.my_uuid):
             # I'm the leader
             self.send_message(self.my_uuid, 1)
-            self.log(f"I'm the leader")
-            self.log(f"sending my own uuid: {self.my_uuid}")
+            #self.log(f"I'm the leader")
+            #self.log(f"sending my own uuid: {self.my_uuid}")
 
         elif msg.uuid > str(self.my_uuid):
             # forward that id
@@ -115,7 +115,7 @@ class LeaderNode:
             comparison = "less"
             self.send_message(self.my_uuid, 0)
             self.log(f"Received: uuid={msg.uuid}, flag={msg.flag}, {comparison}, {self.state}, ignored")
-            self.log(f"sending my own uuid: {self.my_uuid}")
+            #self.log(f"sending my own uuid: {self.my_uuid}")
 
 
 if __name__ == '__main__':
