@@ -1,6 +1,29 @@
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0
-Received: uuid=82e95173-9d45-4a1a-b3b4-8e3fa532d6a7, flag=0, less, 0, ignored
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=1
-Leader is decided to de8f1f61-c19c-4d6b-9811-ea4e5a3634c5.
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=1
+Sent: uuid=189f96ac-b81d-4062-a2a0-a92074b65370, flag=0
+Sent: uuid=7b040139-03e8-4d29-b712-278894f4fa7a, flag=0
+Received: uuid=189f96ac-b81d-4062-a2a0-a92074b65370, flag=0, less, 0, ignored
+Sent: uuid=7b040139-03e8-4d29-b712-278894f4fa7a, flag=0
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Received: uuid=7b040139-03e8-4d29-b712-278894f4fa7a, flag=0, less, 0, ignored
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Received: uuid=7b040139-03e8-4d29-b712-278894f4fa7a, flag=0, less, 0, ignored
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Leader is decided to d8d5bfc8-2663-4252-b6b3-a35096cfb978Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=0, greater, 0, forwarded
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1
+Leader is decided to d8d5bfc8-2663-4252-b6b3-a35096cfb978.
+ greater, 0, forwarded
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1
+Received: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1, greater, 0, forwarded
+Leader is decided to d8d5bfc8-2663-4252-b6b3-a35096cfb978.
+Sent: uuid=d8d5bfc8-2663-4252-b6b3-a35096cfb978, flag=1

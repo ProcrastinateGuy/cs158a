@@ -22,15 +22,22 @@ class Message:
         return Message(uuid.UUID(data['uuid']), data['flag'])
 
 class LeaderNode:
-    def __init__(self, config_path= sys.argv[1]):
+    def __init__(self, config_path= "./a3/config.txt"):
         self.my_uuid = uuid.uuid4()
         self.leader_id = None
         self.state = 0  # 0: election ongoing, 1: leader decided
+        try:
+            config_path = sys.argv[1]   #update the config path if provided
+        except:
+            print("no config file provided, default to \'a3/config.txt\'")
+            config_path= "./a3/config.txt"
+
+
         self.load_config(config_path)
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_ready = Event()
-        self.log_file = open('a3/log1.txt', 'a')
+        self.log_file = open('./a3/log1.txt', 'a')
 
     def load_config(self, path):
         with open(path, 'r') as f:
