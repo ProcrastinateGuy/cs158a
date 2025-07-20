@@ -108,6 +108,7 @@ class LeaderNode:
         if msg.uuid == str(self.my_uuid):
             # I'm the leader
             self.send_message(self.my_uuid, 1)
+            self.log(f"Leader is decided to {self.my_uuid}.")
             #self.log(f"I'm the leader")
             #self.log(f"sending my own uuid: {self.my_uuid}")
 
