@@ -16,7 +16,7 @@
         <li>The instances will terminate when a leader is decided, with the leader's ID printed on the screen</li>
     </ol>
     <ul style = "font-size: 19px;">
-        <li>&starf;<b>You must pass the config file as the command line argument</b>&starf;</li>
+        <li>&starf;<b>if no command line argumentis provided the process will use the default path "<i>./a3/config.txt</i>"</b>&starf;</li>
         <li>&starf;<b>The log file will be generated after termination</b>&starf;</li>
     </ul>
 </div>

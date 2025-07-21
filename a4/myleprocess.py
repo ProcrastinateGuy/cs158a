@@ -22,15 +22,22 @@ class Message:
         return Message(uuid.UUID(data['uuid']), data['flag'])
 
 class LeaderNode:
-    def __init__(self, config_path= sys.argv[1]):
+    def __init__(self, config_path= "./a3/config.txt"):
         self.my_uuid = uuid.uuid4()
         self.leader_id = None
         self.state = 0  # 0: election ongoing, 1: leader decided
+        try:
+            config_path = sys.argv[1]   #update the config path if provided
+        except:
+            print("no config file provided, default to \'a3/config.txt\'")
+            config_path= "./a3/config.txt"
+
+
         self.load_config(config_path)
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_ready = Event()
-        self.log_file = open('a3/log1.txt', 'a')
+        self.log_file = open('./a3/log1.txt', 'a')
 
     def load_config(self, path):
         with open(path, 'r') as f:
@@ -88,19 +95,21 @@ class LeaderNode:
 
     def handle_message(self, msg):
 
-        #special case: leader msg received
-        if msg.flag == 1:
-            if self.leader_id != msg.uuid: # if this is the first time we see the leader
-                self.leader_id = msg.uuid
-                self.log(f"Leader is decided to {msg.uuid}.")
-            else: #if the same leader comes again -> stop the flow
-                return
+        #special case: other leader msg received
+        if msg.flag == 1 and msg.uuid != str(self.my_uuid):
+            self.leader_id = msg.uuid
+            self.log(f"Leader is decided to {msg.uuid}.")
+            self.send_message(msg.uuid, msg.flag) #forward the message
+            return
 
         comparison = "same"
 
         if msg.uuid == str(self.my_uuid):
+            if msg.flag == 1:
+                return # end the flow
             # I'm the leader
             self.send_message(self.my_uuid, 1)
+            self.log(f"Leader is decided to {self.my_uuid}.")
             #self.log(f"I'm the leader")
             #self.log(f"sending my own uuid: {self.my_uuid}")
 
