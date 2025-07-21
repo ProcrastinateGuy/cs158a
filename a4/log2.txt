@@ -1,8 +1,7 @@
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0Sent: uuid=84e2188c-7e98-476d-9a98-95dcc4a5f298, flag=0
-
-Received: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0, greater, 0, forwarded
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0
-Received: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=0, greater, 0, forwarded
-Leader is decided to de8f1f61-c19c-4d6b-9811-ea4e5a3634c5.
-Sent: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=1
-Received: uuid=de8f1f61-c19c-4d6b-9811-ea4e5a3634c5, flag=1, greater, 0, forwarded
+Sent: uuid=8c06130a-6b84-4fc4-9276-d75ad9dda295, flag=0
+Sent: uuid=8c06130a-6b84-4fc4-9276-d75ad9dda295, flag=0
+Received: uuid=29da52a9-6d42-4151-99e9-7aa198b91020, flag=0, less, 0, ignored
+Sent: uuid=8c06130a-6b84-4fc4-9276-d75ad9dda295, flag=0
+Received: uuid=3b2b3268-f7be-4388-9baf-da35be1325e5, flag=0, less, 0, ignored
+Sent: uuid=8c06130a-6b84-4fc4-9276-d75ad9dda295, flag=1
+Leader is decided to 8c06130a-6b84-4fc4-9276-d75ad9dda295.
